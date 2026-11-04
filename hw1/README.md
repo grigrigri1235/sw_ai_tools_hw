@@ -47,14 +47,17 @@ The timing program runs every size below.
 
 ## results.csv
 
-Our timing program writes it: one row per size, plus your CPU, OS, compiler and any warnings at the top. Don't edit it by hand.
+The timing program writes this file. Don't edit it.
 
-- `time_s`: the median time of one call. If the first call takes 2 s or more, it is the only one.
-- `runs`: how many calls that time comes from.
-- `peak_memory_mb`: the most memory used, including A, B and C.
-- `extra_memory_mb`: what your matmul used on top of A, B and C.
-- `relative_error`: the error of the first call. The same ID gives the same number on every computer.
-- `result`: pass, or why it failed.
+At the top: your CPU, OS, compiler, and any warnings. Then one row per size:
+
+- `m`, `n`, `p`: the size. A is m×n, B is n×p, C is m×p.
+- `time_s`: seconds per matmul call. The program calls matmul several times and takes the median time.
+- `runs`: how many times matmul was called for this size.
+- `peak_memory_mb`: the most memory the whole program used, A, B and C included.
+- `extra_memory_mb`: memory your matmul used beyond A, B and C.
+- `relative_error`: how far C is from the right answer, on the first call. Smaller is better.
+- `result`: `pass`, or why it failed.
 
 ## Tokens
 
@@ -88,7 +91,7 @@ A zip that includes:
 - `results.csv`
 - `prompts.md`
 
-In the email itself, the link to your report's Google Doc. Share it with eran.b@campus.technion.ac.il as Editor, since only editors can see version history. Don't send a PDF.
+In the email itself, the link to your report's Google Doc. Share it with eran.ben.elihao@gmail.com **as editor**. 
 
 ## Tip
 
