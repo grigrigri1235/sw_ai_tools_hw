@@ -39,10 +39,11 @@ Paste only the failing line, not all the output.
 
 ## Sizes
 
-The timing program runs every size below. N means N×N times N×N. The others are m×n times n×p, written m×n×p.
+The timing program runs every size below.
 
-- N = 16, 32, 64, 128, 256, 512, 1000, 1023, 1024, 1025, 2048
-- 2048×64×2048 and 64×2048×64
+- N = 16, 32, 64, 128, 256, 512, 1000, 1023, 1024, 1025, 2048: (N×N) times (N×N)
+- (2048×64) times (64×2048)
+- (64×2048) times (2048×64)
 
 ## results.csv
 
