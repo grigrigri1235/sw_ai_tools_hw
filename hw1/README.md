@@ -8,6 +8,8 @@ In HW1 you ask the Antigravity agent to write matrix multiplication in C++. Ask 
 
 HW1 is graded on correctness and your explanation ONLY, not on speed.
 
+Throughout this entire work, write your report in a Google Doc, so we can see the version history (see [Submit](#submit)).
+
 ## Rules
 
 - Work alone.
@@ -27,15 +29,13 @@ All three are in the HW1 repo, with this assignment as `README.md`.
 
 ## Steps
 
-1. Check that `g++ --version` works. Windows: build and run everything in a WSL terminal, as in HW0 step 7.
-2. Clone the HW1 repo, and start `agy` in its folder.
-3. In `agy`, ask the agent to fill `matmul.cpp` according to `matmul.h`.
-4. Copy every prompt you used into `prompts.md`, word for word.
-5. Build and run the timing program yourself, in the terminal: `g++ -std=c++17 -O0 timing.cpp matmul.cpp -o timing`, then `./timing <your ID>`. It takes a few minutes, checks every size and writes `results.csv`.
-6. If a size fails, tell the agent.\
-Paste only the failing line, not all the output.
+1. Check that `g++ --version` works. Windows: build and run everything in a WSL terminal.
+2. Open Antigravity CLI.
+3. Ask the agent to fill `matmul.cpp` according to `matmul.h`.
+4. Copy every prompt you used into `prompts.md`.
+5. Build and run the timing program yourself: `g++ -std=c++17 -O0 timing.cpp matmul.cpp -o timing`, then `./timing <your ID>`. It takes a few minutes, checks every size and writes `results.csv`.
+6. If a size fails, tell the agent. Paste only the failing line, not all the output.
 7. Repeat until every size passes.
-8. Write the report in a Google Doc.
 
 ## Sizes
 
@@ -44,6 +44,8 @@ The timing program runs every size below.
 - N = 16, 32, 64, 128, 256, 512, 1000, 1023, 1024, 1025, 2048: (N×N) times (N×N)
 - (2048×64) times (64×2048)
 - (64×2048) times (2048×64)
+
+We also have hidden tests.
 
 ## results.csv
 
@@ -84,14 +86,13 @@ End with this line, signed: "I used only Antigravity for this HW."
 ## Submit
 
 By email to eran.b@campus.technion.ac.il, by 15.11.26, 23:59:
-
 A zip that includes:
-
 - `matmul.cpp`
 - `results.csv`
 - `prompts.md`
 
-In the email itself, the link to your report's Google Doc. Share it with eran.ben.elihao@gmail.com **as editor**. 
+In the email itself, write your full name, ID, and a link to your report's Google Doc, so we can see the version history.
+Share it with eran.ben.elihao@gmail.com **as editor**. 
 
 ## Tip
 
